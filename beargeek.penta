@@ -1,0 +1,155 @@
+" Beargeek theme for pentadactyl
+" "BEAR GEEK"
+"
+" File Name         : beargeek.penta
+" Created By        : Thomas Aurel
+" Creation Date     : March 19th, 2015
+" Version           : 0.1
+" Last Change       : March 31th, 2015 at 08:34:12
+" Last Changed By   : Thomas Aurel
+"
+" Reset styles
+highlight clear
+
+" Background and Foreground colors        {{{1
+" --------------------------------------------
+" Foreground colors     {{{2
+" --------------------------
+highlight s_base0       color: #c0c0c0 !important;
+highlight s_base0_bold  color: #c0c0c0 font-weight: bold !important;
+highlight s_base1       color: #8a8a8a !important;
+highlight s_blue        color: #6b93cb !important;
+highlight s_blue_u      color: #6b93cb font-weight: underline !important;
+highlight s_cyan        color: #00cece !important;
+highlight s_cyan_bold   color: #00cece; font-weight: bold !important;
+highlight s_disabled    color: #bb493b !important;
+highlight s_enabled     color: #6b8e23 !important;
+highlight s_green       color: #cece00 !important;
+highlight s_green_bold  color: #cece00; font-weight: bold !important;
+highlight s_orange      color: #cc6c00 !important;
+highlight s_magenta     color: #a64ca6 !importnat;
+highlight s_number      color: #87afff !important;
+highlight s_red         color: #bb493b !important;
+highlight s_yellow      color: #ceae00 !important;
+highlight s_yellow_bold color: #ceae00 font-weight: bold !important;
+" }}}2
+" Background colors     {{{2
+" --------------------------
+highlight s_base0_back background-color: #1c1c1c !important;
+highlight s_base1_back background-color: #262626 !important;
+highlight s_base2_back background-color: #454545 !important;
+highlight s_base3_back background-color: #5e5e5e !important;
+" }}}2
+" Miscs Backgrounds     {{{2
+" --------------------------
+highlight s_comp_sep    color: #00cece !important; border-bottom: solid 1px #00ffff !important;
+highlight s_top_cyan    border-top: solid 2px #00cece; color: #00cece; font-weight: bold !important;
+highlight s_top_red     border-top: solid 2px #bb493b; color: #bb493b; font-weight: bold !important;
+highlight s_top_blue    border-top: solid 2px #6b93cb; color: #6b93cb; font-weight: bold !important;
+highlight s_top_green   border-top: solid 2px #6b8e23; color: #6b8e23; font-weight: bold !important;
+" }}}2
+" }}}1
+" Global Value                            {{{1
+" -------------------------------------------
+highlight FontFixed font-size: 9px; font-family: monospace !important;
+highlight FontCode font-size: 9px; font-family: monospace !important;
+highlight FontProportioal font-size: 9px; font-family: monospace !important;
+" }}}1
+" Groups Theme                          {{{1
+" ------------------------------------------
+" Addons Line           {{{2
+" --------------------------
+highlight -link=s_base0                   Addon
+highlight -link=s_cyan_bold,s_base2_back  AddonBar
+" highlight AddonCell weight: 100%;
+highlight -link=s_yellow                  AddonDescription
+highlight -link=s_cyan_bold,s_base2_back,s_comp_sep AddonHead
+highlight -link=s_base0                   AddonName
+highlight -link=s_number                  AddonVersion
+" Addons
+" }}}2
+" Command Line          {{{2
+" --------------------------
+highlight -link=s_magenta                 Button
+highlight -link=s_disabled                Disabled
+highlight -link=s_enabled                 Enabled
+highlight -link=s_green_bold              Filter
+highlight -link=s_number                  NonText
+highlight -link=s_base0,s_base0_back      Normal
+highlight -link=s_magenta                 Tag
+highlight -link=s_cyan_bold,s_base2_back  Title
+highlight -link=s_yellow                  URL
+highlight -link=s_blue_u                  URL:hover
+" }}}2
+" Completion Line       {{{2
+" --------------------------
+highlight -link=s_cyan_bold,s_base2_back  CompTitle
+highlight -link=s_comp_sep                CompTitleSep
+highlight -link=s_yellow                  CompDesc
+highlight -link=s_base0                   CompItem
+highlight -link=s_base1_back              CompItem:nth-child(2n+1)
+highlight -link=s_cyan_bold,s_base3_back  CompItem[selected] -a
+" }}}2
+" Download Line         {{{2
+" --------------------------
+" highlight -link=s_base3_back              Download[active]
+highlight -link=s_base0                   Download
+highlight -link=s_green                   DownloadButtons
+highlight -link=s_cyan                    DownloadTitle
+highlight -link=s_cyan,s_base2_back       DownloadHead
+highlight -link=s_green                   DownloadProgress
+highlight -link=s_base0                   DownloadSource
+highlight -link=s_yellow                  DownloadState
+highlight -link=s_number                  DownloadTime
+highlight -link=s_base0                   Downloads
+" }}}2
+" Help Line             {{{2
+" --------------------------
+" highlight
+" }}}2
+" Message Line          {{{2
+" --------------------------
+highlight -link=s_cyan                    CompMsg
+" Error Messages
+highlight -link=s_red                     ErrorMsg
+highlight -link=s_red                     CmdErrorMsg
+" Info Messages
+highlight -link=s_cyan_bold               InfoMsg
+highlight -link=s_cyan_bold               CmdInfoMsg
+
+highlight -link=s_cyan                    ModeMsg
+highlight -link=s_cyan                    CmdModeMsg
+
+highlight -link=s_cyan                    MoreMsg
+highlight -link=s_cyan                    CmdMoreMsg
+" Warning Messages
+highlight -link=s_green                   WarningMsg
+highlight -link=s_green                   CmdWarningMsg
+" }}}2
+" Other Line            {{{2
+" --------------------------
+highlight -link=s_base1_back              Addon:nth-child(2n+1)
+highlight -link=s_base1_back              Download:nth-child(2n+1)
+highlight -link=s_base1_back              UsageItem:nth-of-type(2n)
+" }}}2
+" Status Line           {{{2
+" --------------------------
+highlight -link=s_cyan_bold   StatusInfoMsg     backgrount: transparent !important;
+highlight -link=s_cyan        StatusMoreMsg     backgrount: transparent !important;
+highlight -link=s_green       StatusWarningMsg  backgrount: transparent !important;
+
+highlight StatusLine background-color: inherit !important; -moz-appearance: none !important; height: 12px !important;
+
+highlight -link=s_cyan                    StatusModeMsg
+highlight -link=s_top_cyan,s_base1_back   StatusLineNormal
+highlight -link=s_top_red,s_base1_back    StatusLineBroken
+highlight -link=s_top_blue,s_base1_back   StatusLineSecure
+highlight -link=s_top_green,s_base1_back  StatusLineExtended
+highlight StatusQuestion color: inherit; background-color: transparent !important;
+" }}}2
+" }}}1
+" Tabs Elements                           {{{1
+" --------------------------------------------
+highlight -link=s_base0 TabText heignt: 12px;
+" highlight -link=s_cyan,s_base3_back TabText[active] heignt: 12px;
+" }}}1
